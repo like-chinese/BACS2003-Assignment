@@ -9,7 +9,7 @@ render_sidebar()
 model = joblib.load("xgboost_model.pkl")
 model_columns = joblib.load("model_columns.pkl")
 
-st.title("🎓 G3 Score Predictor")
+st.title("🎓 G3 Score Predictor - XGBoost")
 
 # Input form
 with st.form("prediction_form"):

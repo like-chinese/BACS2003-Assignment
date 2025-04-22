@@ -2,6 +2,9 @@ import streamlit as st
 import joblib
 import pandas as pd
 
+from sidebar import render_sidebar
+render_sidebar()
+
 # Load the model and model columns
 model = joblib.load("xgboost_model.pkl")
 model_columns = joblib.load("model_columns.pkl")

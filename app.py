@@ -1,8 +1,7 @@
 import streamlit as st
 import joblib
 import pandas as pd
-from sidebar import render_sidebar
-render_sidebar()
+
 
 # Load the trained model
 model = joblib.load("student_score_model.pkl")

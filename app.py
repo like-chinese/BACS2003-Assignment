@@ -43,16 +43,34 @@ with st.form("student_form"):
     health = st.slider("Health Status (1 = very bad, 5 = very good)", 1, 5, 3, help="Student's current health status.")
     activities = st.selectbox("Extracurricular Activities", ["No", "Yes"], help="Is the student involved in extracurricular activities?")
     Walc = st.slider("Weekend Alcohol Consumption (1 = very low, 5 = very high)", 1, 5, 2, help="Alcohol consumption on weekends.")
+  
     famrel = st.slider("Family Relationship Quality (1 = very bad, 5 = excellent)", 1, 5, 3, help="Quality of family relationships.")
+  
     guardian = st.selectbox("Guardian", ["Mother", "Father", "Other"], help="Who is the student's primary guardian?")
+
     Mjob = st.selectbox("Mother's Job", ["Teacher", "Health", "Services", "At_home", "Other"], help="Mother's job: teacher, health, services, at home, or other.")
-    Fjob = st.selectbox("Father's Job", ["Teacher", "Health", "Services", "At_home", "Other"], help="Father's job: teacher, health, services, at home, or other.")
-    studytime = st.slider("Weekly Study Time (1 = <2h, 4 = >10h)", 1, 4, 2, help="Weekly study time: 1 = <2h, 2 = 2–5h, 3 = 5–10h, 4 = >10h.")
-    Fedu = st.slider("Father's Education (0 = none, 4 = higher education)", 0, 4, 2, help="Father's education level (0-4).")
     Medu = st.slider("Mother's Education (0 = none, 4 = higher education)", 0, 4, 2, help="Mother's education level (0-4).")
+  
+    Fjob = st.selectbox("Father's Job", ["Teacher", "Health", "Services", "At_home", "Other"], help="Father's job: teacher, health, services, at home, or other.")
+    Fedu = st.slider("Father's Education (0 = none, 4 = higher education)", 0, 4, 2, help="Father's education level (0-4).")
+
     schoolsup = st.selectbox("Extra Educational Support", ["No", "Yes"], help="Does the student receive extra educational support?")
     goout = st.slider("Going Out with Friends (1 = very low, 5 = very high)", 1, 5, 3, help="Frequency of going out with friends.")
-    traveltime = st.slider("Travel Time to School (1 = <15min, 4 = >1h)", 1, 4, 2, help="Estimated travel time from home to school.")
+
+    studytime_option = st.selectbox(
+        "Weekly Study Time",
+        options=["1 - <2 hours", "2 - 2 to 5 hours", "3 - 5 to 10 hours", "4 - >10 hours"],
+        help="Estimated weekly study time."
+    )
+    studytime = int(studytime_option.split(" - ")[0])
+
+    
+    traveltime_option = st.selectbox(
+        "Travel Time to School",
+        options=["1 - <15 minutes", "2 - 15 to 30 minutes", "3 - 30 minutes to 1 hour", "4 - >1 hour"],
+        help="Estimated time taken to travel from home to school."
+    )
+    traveltime = int(traveltime_option.split(" - ")[0])
 
     submitted = st.form_submit_button("🔍 Predict Final Score")
 

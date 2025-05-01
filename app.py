@@ -6,7 +6,7 @@ import pandas as pd
 st.set_page_config(page_title="Student Score Predictor", layout="centered")
 
 # ==== Load Model ====
-model = joblib.load("student_score_model.pkl")
+model = joblib.load("GradientBoostingRegressor.pkl")
 
 # ==== Styling with CSS ====
 st.markdown("""

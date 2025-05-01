@@ -59,18 +59,18 @@ with st.form("student_form"):
 
     studytime_option = st.selectbox(
         "Weekly Study Time",
-        options=["1 - <2 hours", "2 - 2 to 5 hours", "3 - 5 to 10 hours", "4 - >10 hours"],
+        options=["1 :   <2 hours", "2 :   2 to 5 hours", "3 :   5 to 10 hours", "4 :   >10 hours"],
         help="Estimated weekly study time."
     )
-    studytime = int(studytime_option.split(" - ")[0])
+    studytime = int(studytime_option.split(" : ")[0])
 
     
     traveltime_option = st.selectbox(
         "Travel Time to School",
-        options=["1 - <15 minutes", "2 - 15 to 30 minutes", "3 - 30 minutes to 1 hour", "4 - >1 hour"],
+        options=["1 :   <15 minutes", "2 :   15 to 30 minutes", "3 :   30 minutes to 1 hour", "4 :   >1 hour"],
         help="Estimated time taken to travel from home to school."
     )
-    traveltime = int(traveltime_option.split(" - ")[0])
+    traveltime = int(traveltime_option.split(" : ")[0])
 
     submitted = st.form_submit_button("🔍 Predict Final Score")
 

@@ -6,11 +6,7 @@ import joblib
 st.title("🎯 Random Forest Regressor - Beh Xin Yi")
 
 # Load the trained model
-@st.cache_resource
-def load_model():
-    return joblib.load("Random_Forest_Regressor.pkl")
-
-model = load_model()
+model = joblib.load("Random_Forest_Regressor.pkl")
 
 st.subheader("📝 Enter Student Information")
 

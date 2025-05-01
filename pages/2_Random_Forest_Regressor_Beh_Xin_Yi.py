@@ -8,7 +8,7 @@ st.title("🎯 Random Forest Regressor - Beh Xin Yi")
 # Load the trained model
 @st.cache_resource
 def load_model():
-    return joblib.load("student_grade_model.pkl")
+    return joblib.load("Random_Forest_Regressor.pkl")
 
 model = load_model()
 

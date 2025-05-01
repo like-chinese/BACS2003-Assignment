@@ -114,5 +114,5 @@ if submitted:
         comment = "⚠️ Your score is quite low. Consider seeking extra help and studying more effectively."
 
     # Output
-    st.success(f"📊 Predicted Final Grade (G3): {final_score}")
-    st.info(comment)
+    st.success(f"📊 Predicted Final Grade (G3): {final_score}   / 20")
+    st.info(comment) 

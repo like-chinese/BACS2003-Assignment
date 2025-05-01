@@ -2,7 +2,8 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-st.title("🎓 Final Grade (G3) Prediction System")
+
+st.title("🎯 Random Forest Regressor - Beh Xin Yi")
 
 # Load the trained model
 @st.cache_resource

@@ -28,7 +28,10 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ==== App Title ====
-st.title("🎓 Student Final Grade Predictor (G3) -Gradient Boosting Regressor_Doo Wei Jie")
+st.title("🎓 Student Final Grade Predictor (G3)")
+
+# 副标题：使用 HTML 控制字体大小
+st.markdown("<h5 style='text-align: center; color: gray;'>Gradient Boosting Regressor - Doo Wei Jie</h5>", unsafe_allow_html=True)
 
 # ==== Input Form ====
 with st.form("student_form"):

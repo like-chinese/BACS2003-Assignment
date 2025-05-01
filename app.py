@@ -28,7 +28,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ==== App Title ====
-st.title("🎓 Student Final Grade Predictor (G3)")
+st.title("🎓 Student Final Grade Predictor (G3) -Gradient Boosting Regressor_Doo Wei Jie")
 
 # ==== Input Form ====
 with st.form("student_form"):

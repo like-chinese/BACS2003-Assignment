@@ -3,7 +3,7 @@ import pandas as pd
 import joblib
 
 
-st.title("🎯 Random Forest Regressor - Beh Xin Yi")
+st.title("🎯 Random Forest Regressor - Beh Xin Yee")
 
 # Load the trained model
 model = joblib.load("Random_Forest_Regressor.pkl")
